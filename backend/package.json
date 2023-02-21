@@ -15,7 +15,8 @@
   "dependencies": {
     "fastify": "^4.13.0",
     "@fastify/middie": "^8.1.0",
-    "@fastify/static": "^6.8.0"
+    "@fastify/static": "^6.8.0",
+    "typeorm": "^0.3.11"
   },
   "devDependencies": {
     "@types/node": "^18.14.0",
