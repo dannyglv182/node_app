@@ -1,11 +1,11 @@
 version: '3'
 services:
   postgres:
-    container_name: postgres
+    container_name: Mypostgres
     image: postgres:15-alpine
     restart: always
     ports:
-      - "5432:5432" 
+      - "5433:5433" 
     volumes:
       - db:/var/lib/postgresql/data
     environment:

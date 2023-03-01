@@ -1,0 +1,6 @@
+/.idea/
+/backend/docs/
+/backend/buildDocs/
+/backend/buildTypeorm/
+/backend/build/
+/backend/node_modules/
