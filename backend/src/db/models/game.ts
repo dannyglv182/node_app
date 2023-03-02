@@ -11,7 +11,7 @@ import {
 	UpdateDateColumn
 } from "typeorm";
 
-@Entity({name: "question"})
+@Entity({name: "Game"})
 export class Game extends BaseEntity {
     @PrimaryGeneratedColumn()
 	id: number;
@@ -21,4 +21,7 @@ export class Game extends BaseEntity {
 		type: "varchar"
 	})
 	name: string;
+
+    @Column()
+	pictureLink: string;
 }

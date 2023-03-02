@@ -12,7 +12,6 @@ import {
 } from "typeorm";
 import {User} from "./user";
 
-
 @Entity({name: "question"})
 export class Question extends BaseEntity {
     @PrimaryGeneratedColumn()
