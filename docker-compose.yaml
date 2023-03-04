@@ -5,9 +5,9 @@ services:
     image: postgres:15-alpine
     restart: always
     ports:
-      - "5433:5433" 
+      - "5432:5432" 
     volumes:
-      - db:/var/lib/postgresql/data
+      - db_2:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=app_dev
       - POSTGRES_PASSWORD=retro_app
@@ -28,5 +28,5 @@ services:
 #    depends_on: #This is a lie
 #      - postgres
 volumes:
-  db:
+  db_2:
     driver: local

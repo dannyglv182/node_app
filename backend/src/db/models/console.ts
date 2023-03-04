@@ -1,4 +1,4 @@
-/** @module Models/Game */
+/** @module Models/Console */
 import {
 	BaseEntity,
 	Column,
@@ -10,9 +10,10 @@ import {
 	Relation,
 	UpdateDateColumn
 } from "typeorm";
+// import {User} from "./user";
 
-@Entity({name: "Game"})
-export class Game extends BaseEntity {
+@Entity({name: "console"})
+export class Console extends BaseEntity {
     @PrimaryGeneratedColumn()
 	id: number;
 
@@ -22,6 +23,7 @@ export class Game extends BaseEntity {
 	})
 	name: string;
 
-    @Column()
-	pictureLink: string;
+    // Add release year
+
+    // Add many to many relationship with games
 }
