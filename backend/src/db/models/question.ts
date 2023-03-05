@@ -10,7 +10,7 @@ import {
 	Relation,
 	UpdateDateColumn
 } from "typeorm";
-import {User} from "./user";
+import {User} from "./user.js";
 
 @Entity({name: "question"})
 export class Question extends BaseEntity {
@@ -31,4 +31,6 @@ export class Question extends BaseEntity {
 
 	@ManyToOne(() => User, (category: User) => category.questions)
     AskingUser: User;
+
+	
 }

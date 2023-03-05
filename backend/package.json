@@ -8,7 +8,9 @@
     "dev": "nodemon --exec ts-node src/app.ts --project ./tsconfig.json",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "lint": "eslint . --ext .ts"
+    "lint": "eslint . --ext .ts",
+    "buildJS": "pnpm tsc-esm -p tsconfig.migration.json",
+    "typeorm:sync": "pnpm buildJS && typeorm schema:sync -d ./src/db/datasources/dev_datasource.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +18,8 @@
     "fastify": "^4.13.0",
     "@fastify/middie": "^8.1.0",
     "@fastify/static": "^6.8.0",
+    "pg": "^8.9.0",
+    "dotenv": "^16.0.3",
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.3.11"
   },
@@ -30,6 +34,7 @@
     "eslint": "^8.31.0",
     "nodemon": "^2.0.20",
     "supertest": "^6.3.3",
+    "typeorm-codebase-sync": "^1.1.2",
     "typescript": "^4.9.5",
     "ts-node": "^10.9.1",
     "tsconfig-paths": "^4.1.2"

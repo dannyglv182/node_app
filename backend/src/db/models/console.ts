@@ -10,7 +10,7 @@ import {
 	Relation,
 	UpdateDateColumn
 } from "typeorm";
-// import {User} from "./user";
+import {User} from "./user";
 
 @Entity({name: "console"})
 export class Console extends BaseEntity {

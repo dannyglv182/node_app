@@ -1,10 +1,10 @@
 /** @module dev_ds */
 import "reflect-metadata"
-import { DataSource } from 'typeorm';
-// import { User } from '../models/user';
-// import { Question } from '../models/question';
-// import { Game } from '../models/game';
-// import { Console } from '../models/console';
+import { DataSource, Relation } from 'typeorm';
+import { User, Question } from '../models/user.js';
+// import { Question } from '../models/question.js';
+import { Game } from '../models/game.js';
+import { Console } from '../models/console.js';
 
 export const AppDataSource = new DataSource({
     type: "postgres",
@@ -16,8 +16,8 @@ export const AppDataSource = new DataSource({
     synchronize: true,
     logging: true,
     entities: [
-        // User,
-        // Question,
+        User,
+        Question
         // Game,
         // Console
     ],
