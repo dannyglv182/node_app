@@ -10,7 +10,7 @@
     "start": "node server.js",
     "lint": "eslint . --ext .ts",
     "buildJS": "pnpm tsc-esm -p tsconfig.migration.json",
-    "typeorm:sync": "pnpm buildJS && typeorm schema:sync -d ./src/db/datasources/dev_datasource.js"
+    "typeorm:sync": "pnpm typeorm-ts-node-esm schema:sync -d ./src/db/datasources/dev_ds.ts"
   },
   "author": "",
   "license": "ISC",

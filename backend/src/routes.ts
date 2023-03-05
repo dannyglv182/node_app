@@ -7,6 +7,7 @@ export async function allRoutes (fastify, options) {
     })
 
     /**
+     * ENDPOINT FOR A GAME
      * Gets a game by game title
      */
     fastify.get('/game/:gameTitle', async (request, reply) => {

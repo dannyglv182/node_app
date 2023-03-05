@@ -29,8 +29,11 @@ export class Question extends BaseEntity {
 	})
 	text: string;
 
+	// Each question belongs to a user
 	@ManyToOne(() => User, (category: User) => category.questions)
     AskingUser: User;
+
+	// Each question belongs to a game
 
 	
 }
