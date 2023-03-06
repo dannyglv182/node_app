@@ -29,10 +29,23 @@ export async function allRoutes (fastify, options) {
     })
 
     /**
-     * ENDPOINT FOR A GAME
-     * Gets a game by game title
+     * ENDPOINT FOR A GAME Gets a game by game id.
+     * @name get/users/:gameId
      */
-    fastify.get('/game/:gameTitle', async (request, reply) => {
+    fastify.get('/game/:gameId', async (request, reply) => {
+      const gameId = request.params.gameId; 
+      const gameRepository = AppDataSource.getRepository(Game);
+      const game = await gameRepository.findOneBy({
+        id: gameId,
+      })
+
+      if (game != null) {
+        console.log(game.name);
+      }
+      return { hello: 'Hello Universe' }
+
+
+
 
       // Check if the game exists in the database 
 
