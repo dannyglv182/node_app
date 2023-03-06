@@ -1,4 +1,4 @@
-/** @module Models/User */
+/** @module Models/UserZ */
 import {
 	BaseEntity,
 	Column,
@@ -34,7 +34,7 @@ export class User extends BaseEntity {
 
 }
 
-@Entity({name: "game"})
+@Entity()
 export class Game extends BaseEntity {
     @PrimaryGeneratedColumn()
 	id: number;

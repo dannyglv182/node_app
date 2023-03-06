@@ -1,7 +1,6 @@
-/** @module dev_ds */
-import "reflect-metadata"
+// /** @module dev_ds */
+import dotenv from "dotenv";
 import { DataSource, Relation } from 'typeorm';
-// import { User, Question, Game, Console} from '../models/user.js';
 import { User, Question, Answer, Game} from '../models/user.js';
 
 // import { Question } from '../models/question.js';
@@ -26,5 +25,4 @@ export const AppDataSource = new DataSource({
     subscribers: [],
     migrations: [],
 })
-
 // AppDataSource.initialize();

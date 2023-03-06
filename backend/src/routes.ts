@@ -1,8 +1,30 @@
+import cors from "cors";
+import "reflect-metadata";
+import {Game, User} from "./db/models/user.js";
+import { AppDataSource } from "./db/datasources/dev_ds.js";
 /*
  * Our application routes  
 */
 export async function allRoutes (fastify, options) {
     fastify.get('/', async (request, reply) => {
+      return { hello: 'Hello Universe' }
+    })
+
+    /**
+     * TEMPORARY ENDPOINT TO ADD A GAME WITH SOME DATA
+     */
+    fastify.get('/add', async (request, reply) => {
+      // const userMetadata = AppDataSource.getMetadata(User);
+      // const gameRepository = AppDataSource.getRepository(Game);
+      // gameRepository.save(newGame);
+      // await newGame.save();
+            
+      let newGame = new Game();
+      newGame.name = "Sonic The Hedgehog";
+      newGame.pictureLink = "linktopicture";
+      await newGame.save();
+
+
       return { hello: 'Hello Universe' }
     })
 
