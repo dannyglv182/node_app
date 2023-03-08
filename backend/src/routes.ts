@@ -20,7 +20,7 @@ export async function allRoutes (fastify, options) {
       // await newGame.save();
             
       let newGame = new Game();
-      newGame.name = "Sonic The Hedgehog";
+      newGame.name = "Sonic The Hedgehog 2";
       newGame.pictureLink = "linktopicture";
       await newGame.save();
 

@@ -6,13 +6,15 @@ import { User, Question, Answer, Game} from '../models/user.js';
 // import { Question } from '../models/question.js';
 // import { Console } from '../models/console.js';
 
+dotenv.config();
+const env = process.env;
 export const AppDataSource = new DataSource({
     type: "postgres",
-    host: "localhost",
-    port: 5432,
-    username: "app_dev",
-    password: "retro_app",
-    database: "retro_app",
+    host: env.HOST,
+    port: Number(env.PORT),
+    username: env.USERNAME,
+    password: env.PASSWORD,
+    database: env.DATABASE,
     synchronize: true,
     logging: true,
     entities: [
