@@ -18,6 +18,8 @@
     "fastify": "^4.13.0",
     "@fastify/middie": "^8.1.0",
     "@fastify/static": "^6.8.0",
+    "cors": "^2.8.5",
+    "fastify-cors": "^6.1.0",
     "pg": "^8.9.0",
     "dotenv": "^16.0.3",
     "reflect-metadata": "^0.1.13",

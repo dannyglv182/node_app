@@ -1,4 +1,5 @@
 import Fastify from 'fastify'
+import fastifyMiddie from "@fastify/middie";
 import staticFiles from "@fastify/static";
 import path from "path";
 import { getDirName } from './lib/helpers.js';
@@ -20,6 +21,9 @@ export async function buildApp() {
     root: path.join(getDirName(import.meta), "../public"),
     prefix: "/public/",
 });
+
+  // add express-like 'app.use' middleware support
+  await app.register(fastifyMiddie);
 
   // Add our routes to fastify
   app.register(allRoutes);

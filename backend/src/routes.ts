@@ -6,6 +6,8 @@ import { AppDataSource } from "./db/datasources/dev_ds.js";
  * Our application routes  
 */
 export async function allRoutes (fastify, options) {
+
+    fastify.use(cors());
     fastify.get('/', async (request, reply) => {
       return { hello: 'Hello Universe' }
     })
