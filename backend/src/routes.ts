@@ -40,9 +40,10 @@ export async function allRoutes (fastify, options) {
       })
 
       if (game != null) {
-        console.log(game.name);
+        return { name: game.name };
       }
-      return { hello: 'Hello Universe' }
+      return {name: "unknown"};
+  
 
 
 
