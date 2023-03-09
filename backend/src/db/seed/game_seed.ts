@@ -9,7 +9,7 @@ export async function GameSeeder(app: FastifyInstance){
     */
     let games: string[] = [
         "Super Mario World	- SNES	1990	Platform	Nintendo	12.78",
-        "Super Mario All-Stars	- SNES	1993	Platform	Nintendo	5.99",
+        "Super Mario All Stars	- SNES	1993	Platform	Nintendo	5.99",
         "Donkey Kong Country - SNES	1994	Platform	Nintendo	4.36",
         "Super Mario Kart - SNES	1992	Racing	Nintendo	3.54",
         "Street Fighter II: The World Warrior - SNES	1992	Fighting	Capcom	2.47",
