@@ -11,22 +11,18 @@ export const Game = () => {
 			* So if you try swapping in our project, you'll find we only save 6 kilobytes
 			 */
 			const game = await axios.get(
-				"http://localhost:3000/game/17"
+				"http://localhost:3000/game/29"
 			);
 
-			setGame(await game.data);
+			setGame(await game.data.name);
+            console.log(game.data.name);
 		};
 		void getGame();
 	}, []);
 
 	return (
-		<div>t
-			<h2>Users:</h2>
- {/*            
-			{    users ?
-				<ul>{users.map((user: {email: string, name: string}) => <li key={user.email.toString()}>{user.name} - {user.email}</li>)}</ul>
-				: null
-			}
- */}
+		<div>
+			<h2>Game:</h2>
+            <li>{game}</li>
 		</div> );
 };

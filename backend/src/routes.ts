@@ -31,7 +31,7 @@ export async function allRoutes (fastify, options) {
     })
 
     /**
-     * ENDPOINT FOR A GAME Gets a game by game id.
+     * Endpoing for a game. Gets a game by game id.
      * @name get/users/:gameId
      */
     fastify.get('/game/:gameId', async (request, reply) => {
@@ -42,7 +42,10 @@ export async function allRoutes (fastify, options) {
       })
 
       if (game != null) {
-        return { name: game.name };
+        return { 
+          name: game.name, 
+          photo: game.pictureLink
+        };
       }
       return {name: "unknown"};
   
