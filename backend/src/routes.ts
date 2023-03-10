@@ -68,5 +68,20 @@ export async function allRoutes (fastify, options) {
  */
       // 
     })
+
+
+    /**
+     * Endpoing for getting all games.
+     * @name get/games/
+     */
+        fastify.get('/games', async (request, reply) => {
+          // const gameId = request.params.gameId; 
+          const gameRepository = AppDataSource.getRepository(Game);
+          const games = await gameRepository.find();
     
+          if (games != null) {
+            reply.send(games);
+          }
+          return {name: "unknown"};
+        }) 
   }
