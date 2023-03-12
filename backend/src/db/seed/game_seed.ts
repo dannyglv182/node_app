@@ -1,8 +1,8 @@
 import {FastifyInstance} from "fastify";
 import { Game } from "../models/user.js";
 import { AppDataSource } from "../datasources/dev_ds.js";
-export async function GameSeeder(app: FastifyInstance){
 
+export async function GameSeeder(app: FastifyInstance){
     /*
     * Data obtained from https://www.kaggle.com/datasets/gregorut/videogamesales
     * https://github.com/GregorUT/vgchartzScrape

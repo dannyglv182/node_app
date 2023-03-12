@@ -27,6 +27,12 @@ export class User extends BaseEntity {
 	})
 	name: string;
 
+	@Column({
+		length: 100,
+		type: "varchar"
+	})
+	email: string;
+
 
 	// A user can ask many questions
 	@OneToMany(() => Question, (category: Question) => category.AskingUser)
