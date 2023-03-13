@@ -1,6 +1,16 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
+import {
+	BrowserRouter as Router,
+	Link,
+	Route,
+	Routes,
+	useParams,
+  } from "react-router-dom";
+
 export const Game = () => {
+	const { id } = useParams();
+	const destination = "http://localhost:3000/game/" + id;
 	const [game, setGame] = useState([]);
 
 	useEffect(() => {
@@ -11,7 +21,8 @@ export const Game = () => {
 			* So if you try swapping in our project, you'll find we only save 6 kilobytes
 			 */
 			const game = await axios.get(
-				"http://localhost:3000/game/29"
+				destination
+				// "http://localhost:3000/game/29"
 			);
 
 			setGame(await game.data.name);

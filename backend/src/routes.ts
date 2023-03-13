@@ -82,6 +82,8 @@ export async function allRoutes (fastify, options) {
           if (games != null) {
             reply.send(games);
           }
-          return {name: "unknown"};
+          else {
+            return {name: "unknown"};
+          }
         }) 
   }
