@@ -42,12 +42,15 @@ export async function allRoutes (fastify, options) {
       })
 
       if (game != null) {
-        return { 
+/*         return { 
           name: game.name, 
           photo: game.pictureLink
-        };
+        }; */
+        reply.send(game);
       }
-      return {name: "unknown"};
+      else {
+        return {name: "unknown"};
+      }
   
 
 

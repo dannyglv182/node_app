@@ -12,6 +12,7 @@ export const Game = () => {
 	const { id } = useParams();
 	const destination = "http://localhost:3000/game/" + id;
 	const [game, setGame] = useState([]);
+	let gameValues = []
 
 	useEffect(() => {
 		const getGame = async () => {
@@ -25,15 +26,15 @@ export const Game = () => {
 				// "http://localhost:3000/game/29"
 			);
 
-			setGame(await game.data.name);
-            console.log(game.data.name);
+			setGame(await game.data);
 		};
 		void getGame();
 	}, []);
 
+	gameValues = Object.values(game);
 	return (
 		<div>
-			<h2>Game:</h2>
-            <li>{game}</li>
+			<h2> {gameValues[1]}</h2>
+            <div>{JSON.stringify(game)}</div>
 		</div> );
 };
